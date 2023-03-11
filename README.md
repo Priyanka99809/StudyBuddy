@@ -3,7 +3,7 @@ StudyBuddy is an online platform designed to help students connect with one anot
 
 With StudyBuddy, students can find like-minded individuals who are studying the same subject or preparing for the same exam, regardless of their location. They can use the chatroom feature to communicate in real-time, ask and answer questions, and exchange ideas and insights.
 
-![Screenshot from 2023-03-11 21-56-07](https://user-images.githubusercontent.com/110349711/224495892-20681161-7820-4ea9-ac34-564236d0b44e.png)![Screenshot 
+![image](https://user-images.githubusercontent.com/110349711/224501872-b737c8d8-04da-4058-9d2a-baab1f2d2a8c.png)
 
 ![image](https://user-images.githubusercontent.com/110349711/224496030-c73f2012-301f-4c84-bda3-d50fcd406fc9.png)
 
