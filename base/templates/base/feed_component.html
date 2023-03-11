@@ -1,0 +1,31 @@
+<div class="feed">
+{% for room in rooms %}
+<div class="feed2">
+    <div class="room-name">
+        <h5> <a href="{% url 'room' room.id %}">{{room.name}}</a></h5>
+        <small>{{room.topic.name}}</small>
+    </div>
+    <hr>
+    <!-- only see edit and delete button if user is the host of the room -->
+    <div class="feed3">
+        {% if request.user == room.host %}
+        <div class="b1">
+            <a href="{% url 'update-room' room.id %}">Edit Room</a>
+
+            <a href="{% url 'delete-room' room.id %}">Delete Room</a>
+
+        </div>
+        <br>
+        {% endif %}
+        {% if room.host.id %}
+        <a href="{% url 'user-profile' room.host.id %}">Host  @{{room.host.username}}</a>
+        {% endif %}
+    </div>
+    
+
+   
+    
+    <!-- here above in href room refers to name room in views.py and will generate room/roomid itself and we can change room id  -->
+</div>
+{% endfor %}
+</div>

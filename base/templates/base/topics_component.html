@@ -1,0 +1,14 @@
+<div class="topic-component">
+
+    <h3>Browse Topics</h3>
+        
+        <div class="topic-tag">
+            <a href="{% url 'home' %}">All</a>
+        </div>
+        {% for topic in topics %}
+        <div class="topic-names">
+            <a href="{% url 'home' %}?q={{topic.name}}">{{topic.name}}</a>
+            <!-- generate an url for each topic   -->
+        </div>
+        {% endfor %}
+</div>

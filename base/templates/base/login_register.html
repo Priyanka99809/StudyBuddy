@@ -1,0 +1,57 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="login-wrapper">
+    <div class="find">
+        <h2>Find your study partner</h2>
+        
+    </div>
+    {% if page == 'login' %}
+    <div class="form-wrapper">
+        <form method="POST" action="">
+            {% csrf_token %}
+            <!-- for safety -->
+            <div class="f1">
+                <label>Username: </label>
+            </div>
+            <div class="f2">
+                <input type="text" name="username" placeholder="Enter Username" />
+                <!-- when user will send then name=username will contain username -->
+            </div>
+            <div class="f3">
+                <label>Password: </label>
+
+            </div>
+            <div class="f4">
+                <input type="password" name="password" placeholder="Enter Password" />
+
+            </div>
+            <div class="f5">
+                <input type="submit" value="Login" />
+
+            </div>
+        </form>
+        <div class="f6">
+            <p>Haven't signed up yet?</p>
+            <a href="{% url 'register' %}">Sign up</p>
+        </div>
+
+    </div>
+
+
+    <!-- for register -->
+    {% else %}
+    <div class="register-wrapper">
+        <form method="POST" action="">
+            {% csrf_token %}
+            <!-- for safety -->
+            {{ form.as_p }}
+            <input type="submit" value="Register" />
+        </form>
+
+        <p>Already signed up yet?</p>
+        <a href="{% url 'register' %}">Login</p>
+    </div>
+
+    {% endif %}
+    {% endblock content %}
+</div>
